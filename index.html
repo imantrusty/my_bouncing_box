@@ -1,0 +1,30 @@
+$>cat index.html
+<html style='background-color: black'>
+  <div id="my_bouncing_box" style= "background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;" >purnell_i</div>
+  <script type="text/javascript">
+
+    var box = document.getElementById('my_bouncing_box') ;
+    var x = 1;
+    var y = 1;
+    var xdirection = 1;
+    var ydirection = 1;
+
+var animate = setInterval (function() {
+    x += xdirection; y +=ydirection;
+    box.style.left = x + "px";
+    box.style.top = y + "px";
+
+    if (x >= window.innerWidth - box.clientWidth || x <= 0){
+        xdirection = xdirection * -1;
+    }
+    
+    if (y >= window.innerHeight - box.clientHeight || y <= 0){
+        ydirection = ydirection *-1;
+    }
+
+
+}, 5)
+
+  </script>
+</html>
+$>
